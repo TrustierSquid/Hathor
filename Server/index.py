@@ -89,7 +89,7 @@ def create_app(test_config=None):
       return jsonify({'message': "invalid User"})
     
     
-  # Retrieve Tasks
+  # Creating task
   @app.route('/api/createTask', methods=["POST"])
   def get_tasks():
     try:
