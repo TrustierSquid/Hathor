@@ -1,2 +1,4 @@
 instance/*
 hathor.sqlite
+__pycache__/
+*.pyc
