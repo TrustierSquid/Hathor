@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+// Analogous color scheme
+$primary: #F5276C;
+$secondary: #F54927;
+$tertiary: #F5B027;
+$greyedOut: #797979;
+
+// Used for navbars
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.profilePicture {
+  height: 35px;
+  border-radius: 50%;
+}
