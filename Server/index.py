@@ -40,6 +40,24 @@ def create_app(test_config=None):
     else:
         g.user = None
     
+  # Get all User
+  @app.route('/api/users', methods=['GET'])
+  def getUsers():
+    try:
+      database = db.get_db()
+      cursor = database.cursor()
+
+      cursor.execute("SELECT username FROM user")
+      rows = cursor.fetchall()
+
+      usernames = [row['username'] for row in rows]   
+      
+      
+      return jsonify(usernames), 200
+    except sqlite3.IntegrityError:
+      return jsonify({'message': ' User already exists'})
+
+      
   # Create User
   @app.route('/api/createUser', methods=['POST'])
   def createUser():
