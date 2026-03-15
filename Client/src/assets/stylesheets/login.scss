@@ -1,0 +1,47 @@
+@use 'index';
+
+.login-signup-page {
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .login-signup-component {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    input {
+      height: 40px;
+      width: clamp(300px, 50vw, 500px);
+      border-radius: 0.5rem;
+      border: none;
+      background-color: index.$containerBG;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  .login-signup-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 100px;
+      padding: 0.5rem;
+      background-color: index.$primary;
+      color: white;
+      border-radius: 0.5rem;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 2rem;
+      
+      &:hover {
+        background-color: index.$secondary;
+      }
+    }
+  }
+}
