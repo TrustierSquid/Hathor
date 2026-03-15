@@ -9,6 +9,7 @@
 $primary: #F5276C;
 $secondary: #F54927;
 $tertiary: #F5B027;
+$containerBG: aliceblue;
 $greyedOut: #797979;
 
 // Used for navbars
@@ -18,8 +19,27 @@ $greyedOut: #797979;
   align-items: center;
 }
 
+@mixin flex-space-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.errorMessage {color: red;}
+.successMessage {color: green;}
+
+// For Profile Pictures
 .profilePicture {
   height: 35px;
   border-radius: 50%;
+}
+
+
+// For one component pages
+#container {
+  width: 100vw;
+  height: 100vh;
+  // background-color: lightgrey;
+  padding: 1rem;
+  @include flex-space-center;
 }
