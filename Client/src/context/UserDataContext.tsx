@@ -3,7 +3,6 @@ import {useContext, createContext, useState, useEffect} from 'react';
 
 interface UserContextType {
   data: string[]
-  message: string
   setData: (data: string[]) => void
 }
 
@@ -14,7 +13,6 @@ export default function UserDataContextProvider({children}: {children: React.Rea
   let [loading, setLoading] = useState<boolean>(false)
   let [error, setError] = useState<boolean>(false)
 
-  let message: string = 'hello everyone!'
   
   useEffect(()=> {
     // Getting controller for the cleanup function
@@ -48,7 +46,6 @@ export default function UserDataContextProvider({children}: {children: React.Rea
   return (
     <userContext.Provider value={{
       data,
-      message,
       setData,
     }}>
       {children}
