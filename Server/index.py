@@ -40,7 +40,7 @@ def create_app(test_config=None):
     else:
         g.user = None
     
-  # Get all User
+  # Get logged in user data
   @app.route('/api/users', methods=['GET'])
   def getUsers():
     try:
